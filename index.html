@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffe48f">
+<title>우사기 번역기</title>
+<meta name="description" content="한국어를 우사기로, 우사기를 한국어로.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg width="0" height="0" class="defs" aria-hidden="true">
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="12" height="12" rx="3"/><path d="M15.5 8.5V6.5A2.5 2.5 0 0 0 13 4H6.5A2.5 2.5 0 0 0 4 6.5V13a2.5 2.5 0 0 0 2.5 2.5h2"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M20.5 3.5 10 14"/><path d="M20.5 3.5 14 20.5l-4-6.5-6.5-4z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7 7 17"/></symbol>
+</svg>
+
+<header class="band top">
+  <h1 class="title">우사기 번역기</h1>
+  <p class="sub">USAGI TRANSLATOR</p>
+</header>
+
+<main class="page">
+  <section id="got" class="card got" hidden>
+    <p class="shout"><i aria-hidden="true"></i>우사기가 도착했어요<i aria-hidden="true"></i></p>
+    <p id="gotText" class="usagi"></p>
+    <button id="reveal" class="pill reveal">풀어 보기</button>
+  </section>
+
+  <section class="card src">
+    <p id="srcLab" class="tag">한국어</p>
+    <textarea id="in" rows="3" maxlength="300" spellcheck="false" aria-labelledby="srcLab"></textarea>
+    <div class="row">
+      <span id="count" class="count">0 / 300</span>
+      <button id="clear" class="clear" aria-label="지우기" hidden><svg class="ic"><use href="#i-x"/></svg></button>
+    </div>
+  </section>
+
+  <svg class="arrow" viewBox="0 0 24 30" aria-hidden="true"><path d="M12 3v22M5.5 18.5 12 25l6.5-6.5"/></svg>
+
+  <section class="card out">
+    <p id="outLab" class="tag">우사기</p>
+    <p id="out" class="usagi" aria-live="polite"></p>
+    <svg id="ears" class="ears" viewBox="0 0 46 46" aria-hidden="true">
+      <path class="l" d="M7 45C5 30 4.6 14 8.6 6.2 10.6 2.2 14.8 2 16.4 6c2.8 7.6 2.8 23 1.8 39"/>
+      <path class="r" d="M24.4 45c-.2-15 1.6-29.4 6.8-37.6 2.4-3.6 6.6-2.8 7 1.2 1 8.6-2.8 22.8-5.2 36.4"/>
+    </svg>
+    <svg class="ema" viewBox="0 0 30 30" aria-hidden="true"><path d="M22 18.5 13.5 14M23.5 10.5l-6.6-.9M27 4.2l-4.6 2.6"/></svg>
+  </section>
+
+  <div class="acts">
+    <button id="copy" class="pill"><svg class="ic"><use href="#i-copy"/></svg>복사</button>
+    <button id="send" class="pill primary"><svg class="ic"><use href="#i-send"/></svg>보내기</button>
+  </div>
+</main>
+
+<footer class="band foot">
+  <p>비공식 팬메이드 · 원작 ⓒナガノ · 요청이 있으면 바로 내립니다</p>
+</footer>
+<div id="toast" class="toast" role="status"></div>
+
+<script src="usagi-engine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
