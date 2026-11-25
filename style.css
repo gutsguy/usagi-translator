@@ -70,7 +70,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .arrow { display: block; width: 18px; height: 24px; margin: 12px auto 12px; fill: none; stroke: var(--ink); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
 
-.out { background: var(--note); min-height: 140px; }
+.out { background: var(--note); min-height: 140px; isolation: auto; }
 .usagi { font-family: var(--round); font-size: 1.55rem; line-height: 1.5; word-break: keep-all; overflow-wrap: anywhere; }
 .usagi .w { white-space: nowrap; }
 .usagi.ko { font-family: var(--sans); font-size: 1.2rem; font-weight: 800; line-height: 1.6; }

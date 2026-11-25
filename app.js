@@ -124,7 +124,7 @@
     if (r && r.dir === 'decode' && !r.err) {
       $('#got').hidden = false;
       words($('#gotText'), got);
-      input.placeholder = '답장도 우사기로';
+      input.placeholder = '한국어나 우사기어 입력';
       $('#reveal').addEventListener('click', (e) => {
         e.currentTarget.remove();
         const p = $('#gotText');
@@ -133,8 +133,7 @@
         input.focus({ preventScroll: true });
       }, { once: true });
     } else {
-      input.placeholder = '한국어나 우사기';
-      input.value = '오늘 저녁 뭐 먹지';
+      input.placeholder = '한국어나 우사기어 입력';
     }
     update();
   }).catch(() => setOut('번역기를 불러오지 못했어요. 새로고침해 주세요.', 'err'));
