@@ -90,7 +90,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* 결과 칸 뒤로 귀 두 개, 쫑긋할 때 놀람 선 */
 .ears {
   position: absolute; right: 26px; top: -44px; width: 54px; height: 54px; z-index: -1; overflow: visible;
-  fill: var(--usa); stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; cursor: pointer;
+  fill: #f7e5b8; stroke: var(--ink); stroke-width: 2; stroke-linejoin: round; cursor: pointer; /* 우사기 몸 색 */
 }
 .ears path { transform-box: fill-box; transform-origin: 50% 100%; }
 .ears .l { transform: rotate(-6deg); }
